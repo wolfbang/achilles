@@ -23,10 +23,16 @@ def query_info(section):
     print infos
 
 
+def keys():
+    keys = client.keys('*')
+    print keys
+
+
 def run():
     query_info('cpu')
     query_info('memory')
     query_info('connection')
+    keys()
 
 
 if __name__ == '__main__':
