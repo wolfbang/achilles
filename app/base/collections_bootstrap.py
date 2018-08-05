@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : collections.py
+# @File  : collections_bootstrap.py
 # @Author: lucas
 # @Date  : 8/5/18
 # @Desc  :
