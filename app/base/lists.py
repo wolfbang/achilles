@@ -56,6 +56,23 @@ def extend():
     print len(numbers)
     numbers.insert(4, random.random())
     print numbers
+    head = numbers.pop()
+    print '[head]', head
+    numbers.remove(6)
+    print numbers
+    numbers.reverse()
+    print numbers
+    copy = numbers[:]
+    copy.sort()
+    print '[Sort]', copy
+
+
+def list_comprehension():
+    numbers = [1, 2, 3, 4]
+    squares = [n * n for n in numbers]
+    pprint.pprint(squares)
+    squares = [n * n for n in numbers if n % 2 == 0]
+    pprint.pprint(squares)
 
 
 def run():
@@ -64,6 +81,7 @@ def run():
     do_slice()
     all_list()
     extend()
+    list_comprehension()
 
 
 if __name__ == '__main__':
