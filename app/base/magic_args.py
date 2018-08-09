@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @File  : args_magic.py
+# @File  : magic_args.py
 # @Author: lucas
 # @Date  : 8/5/18
 # @Desc  :
