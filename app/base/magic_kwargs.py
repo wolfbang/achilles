@@ -15,7 +15,9 @@ def greet_me(**kwargs):
 
 
 def run():
-    greet_me(name='lucas', gender='male', address='shanghai')
+    greet_me(name='lucas', gender='male', address='shanghai,china')
+    greet_me(nickname='ll', skill='coding', signature='stay hungary,stay foolish')
+    greet_me(major='computer science', hobby='honor of glory', company='google')
 
 
 if __name__ == '__main__':
