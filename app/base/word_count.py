@@ -47,7 +47,7 @@ def print_top(filename):
 
 
 def run():
-    filename = '/Users/lucas/projects/achilles/app/base/args.py'
+    filename = '/Users/lucas/projects/achilles/app/base/magic_args.py'
     get_word_count(filename)
     print_words(filename)
     print_top(filename)
