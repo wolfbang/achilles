@@ -15,7 +15,7 @@ def _file_content_with_codec(filename):
 
     with codecs.open(filename, 'rU', 'utf-8') as f:
         for line in f:
-            print line
+            print(line)
 
 
 def _file_content(filename):
@@ -23,7 +23,7 @@ def _file_content(filename):
         return
     with open(filename) as f:
         for line in f:
-            print line
+            print(line)
 
 
 def run():
