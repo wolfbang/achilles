@@ -5,14 +5,18 @@
 # @Date  : 8/15/18
 # @Desc  :
 
+import pprint
+
 
 def _read_file(filepath):
+    """read the file"""
     with open(filepath, 'rb') as f:
         data = f.read()
         return data
 
 
 def _is_jpg_file(file_data):
+    """is JGP file"""
     if not file_data:
         return False
 
@@ -29,7 +33,7 @@ def run():
     is_jpg = _is_jpg_file(file_data=data)
 
     message = "{0} is JPG file!".format(file_path) if is_jpg else "{0} is not JPG file!".format(file_path)
-    print message
+    pprint.pprint(message)
 
 
 if __name__ == '__main__':
