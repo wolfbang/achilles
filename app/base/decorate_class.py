@@ -28,7 +28,10 @@ def pp_decorate(func):
     return func_wrapper
 
 
-class Gender():
+class Gender:
+    def __init__(self):
+        pass
+
     male = 1
     female = 2
 
