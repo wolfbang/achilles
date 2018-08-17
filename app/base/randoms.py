@@ -14,6 +14,8 @@ import pprint
 def _numpy_random():
     random_number = np.random.random_integers(0, 100)
     pprint.pprint(random_number)
+    result = np.random.randint(1041389120000,1041389120001)
+    print result
 
 
 def run():
