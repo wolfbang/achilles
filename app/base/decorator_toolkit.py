@@ -11,6 +11,10 @@ import pprint
 
 
 class logit(object):
+    """
+    a logit decorator wrapped with function
+    """
+
     def __init__(self, logfile='out.log'):
         self.logfile = logfile
 
@@ -33,10 +37,22 @@ class logit(object):
         pass
 
 
+class email_logit(logit):
+    """
+    a subclass of logit
+    """
+
+    def __init__(self, email='admin@project.com', *args, **kwargs):
+        self.email = email
+        super(email_logit, self).__init__(*args, **kwargs)
+
+    def notify(self):
+        pprint.pprint('do send an email!')
+
+
 @logit()
 def __func():
     pprint.pprint('__func is called')
-    pass
 
 
 def run():
