@@ -7,6 +7,7 @@
 
 
 import pprint
+import inspect
 
 
 def __init():
@@ -24,9 +25,14 @@ def __type():
     pprint.pprint(id('google'))
 
 
+def __introspection():
+    pprint.pprint(inspect.getmembers([x for x in range(1, 10)]))
+
+
 def run():
     __init()
     __type()
+    __introspection()
 
 
 if __name__ == '__main__':
