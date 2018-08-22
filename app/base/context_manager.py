@@ -17,7 +17,9 @@ class File(object):
         return self.file_obj
 
     def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Exception has been handled")
         self.file_obj.close()
+        return True
 
 
 def __custom_open_file(text='add some log'):
@@ -30,6 +32,7 @@ def open_file(file_path, text='some text'):
     if file_path:
         with open(file_path, 'w') as opened_file:
             opened_file.write(text)
+            # opened_file.undefined_function()
     pprint.pprint('[Manager] done')
 
 
