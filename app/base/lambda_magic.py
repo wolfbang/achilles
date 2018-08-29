@@ -28,9 +28,17 @@ def _mock_lambda():
     pprint.pprint(result)
 
 
+def _mock():
+    dict_a = [{'name': 'python', 'points': 10}, {'name': 'java', 'points': 20}]
+    pprint.pprint(map(lambda x: x['name'], dict_a))
+    pprint.pprint(map(lambda x: x['points'] * 10, dict_a))
+    pprint.pprint(map(lambda x: x['name'] == 'python', dict_a))
+
+
 def run():
     _mock_lambda()
     _mock_map()
+    _mock()
 
 
 if __name__ == '__main__':
