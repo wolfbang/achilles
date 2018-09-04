@@ -15,7 +15,7 @@ class Person(object):
     person class
     """
 
-    """init class object"""
+    """init class model"""
     def __init__(self):
         self.id = 1
         self.nickname = 'mark'
@@ -44,7 +44,7 @@ class Person(object):
     def __delattr__(self, name):
         super(Person, self).__delattr__(name)
 
-    """is equal to another object"""
+    """is equal to another model"""
     def __eq__(self, o):
         return super(Person, self).__eq__(o)
 
@@ -65,7 +65,7 @@ class Person(object):
     def __reduce_ex__(self, protocol):
         return super(Person, self).__reduce_ex__(protocol)
 
-    """size of object"""
+    """size of model"""
     def __sizeof__(self):
         return super(Person, self).__sizeof__()
 
