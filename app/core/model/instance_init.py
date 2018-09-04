@@ -7,10 +7,12 @@
 
 
 class Student(object):
+    id = 0
+
     def __init__(self, name, score):
         super(Student, self).__init__()
-        self.name = name
-        self.score = score
+        self.__name = name
+        self.__score = score
 
     def __str__(self):
         return str(self.__dict__)
@@ -19,7 +21,20 @@ class Student(object):
         return str(self.__dict__)
 
     def print_score(self):
-        print '%s,%s' % (self.name, self.score)
+        print '%s,%s' % (self.__name, self.__score)
+
+    def get_grade(self):
+        if self.__score > 90:
+            return 'A'
+        elif 70 < self.__score < 90:
+            return 'B'
+        elif self.__score > 60 and self.__score:
+            return 'C'
+        else:
+            return 'D'
+
+    def get_id(self):
+        return self.id
 
 
 def run():
@@ -33,6 +48,7 @@ def run():
     student.print_score()
     pprint.pprint(str(student.__dict__))
     print str(student.__dict__)
+    print student.get_grade()
 
 
 if __name__ == '__main__':
