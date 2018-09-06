@@ -48,6 +48,7 @@ def run():
     megatron.die()
     Robot.how_many()
     blaster.die()
+    Robot.how_many()
 
 
 if __name__ == '__main__':

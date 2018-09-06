@@ -6,6 +6,7 @@
 # @Desc  :
 
 from instance_init import Student
+from class_init import Sample
 
 
 class Assistant(Student):
@@ -43,6 +44,9 @@ def mock():
     import pprint
     pprint.pprint(assistant)
     pprint.pprint(assistant.get_id())
+
+    sample = Sample('Simpson', 25, 78, 2, 'TV series')
+    print sample
 
 
 def run():
