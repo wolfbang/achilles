@@ -45,13 +45,20 @@ def mock():
     pprint.pprint(assistant)
     pprint.pprint(assistant.get_id())
 
-    sample = Sample('Simpson', 25, 78, 2, 'TV series')
+    sample = Sample('Simpson', 25, 78, 2, 'TV Series')
     print sample
+
+
+def test():
+    sample = Sample('Simpson', 25, 78, 2, 'TV Series')
+    print sample
+    return sample and sample.name
 
 
 def run():
     mock()
     access_attr()
+    print test()
 
 
 if __name__ == '__main__':
