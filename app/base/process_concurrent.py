@@ -8,6 +8,8 @@
 from pprint import pprint
 import threading
 
+rock = threading.RLock()
+
 balance = 100
 
 
@@ -19,7 +21,11 @@ def mock_withdraw(n):
 
 def run_thread(n):
     for i in range(0, 10000):
-        mock_withdraw(n)
+        rock.acquire()
+        try:
+            mock_withdraw(n)
+        finally:
+            rock.release()
         pprint('%s,%s' % (balance, threading.currentThread().getName()))
 
 
