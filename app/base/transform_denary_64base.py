@@ -72,6 +72,7 @@ def run():
     str_one_hundred_million = encode_base64(num_one_hundred_million)
     pprint(str_one_hundred_million)
     pprint(decode_base64(str_one_hundred_million) == num_one_hundred_million)
+    pprint(decode_base64(str3))
 
 
 if __name__ == '__main__':
