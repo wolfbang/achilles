@@ -44,14 +44,14 @@ class Memorized(object):
 
 
 @Memorized(10)
-def base():
-    pprint('do base now!')
-    return '[Base] Result'
+def base(uid):
+    pprint('[User-%s]do base now!' % uid)
+    return '[Base] Result %s' % uid
 
 
 def run():
     for i in range(0, 100):
-        pprint(base())
+        pprint(base(i))
 
 
 if __name__ == '__main__':
