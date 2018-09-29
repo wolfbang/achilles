@@ -39,7 +39,7 @@ class TreeNode(object):
 
 class BuildTree(object):
     """
-    build binary search tree, leftNode is less than the rightNode
+    build binary search tree, left node is less than the right node
     """
 
     def build(self, data_list):
