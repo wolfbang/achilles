@@ -9,11 +9,55 @@
 from pprint import pprint
 
 
-class SimpleTree(object):
-    def __init__(self, data, left, right):
+class Node(object):
+    def __init__(self, data):
+        self.left = None
         self.data = data
-        self.left = left
-        self.right = right
+        self.right = None
+
+    def __repr__(self):
+        return 'Node({})'.format(self.data)
+
+    def __str__(self):
+        return 'Node({})'.format(self.data)
+
+
+class SimpleTree(object):
+    """
+    a simple binary tree
+    """
+    def insert(self, node, data):
+        """
+        insert a node
+        :param node: 
+        :param data: 
+        :return: 
+        """
+
+        if node is None:
+            return Node(data)
+
+        if data < node.data:
+            node.left = self.insert(node.left, data)
+
+        elif data > node.data:
+            node.right = self.insert(node.right, data)
+
+        return node
+
+    def search(self, node, data):
+        """
+        binary search
+        :param node: 
+        :param data: 
+        :return: 
+        """
+        if node is None or node.data == data:
+            return node
+        elif node.data < data:
+            return self.search(node.right, data)
+        elif node.data > data:
+            return self.search(node.left, data)
 
     def traverse_preorder(self, root):
         if not root:
@@ -41,27 +85,28 @@ class SimpleTree(object):
 
 
 def run():
-    root = SimpleTree('root', None, None)
+    root = Node(10)
 
-    child_left = SimpleTree('left', None, None)
-    child_right = SimpleTree('right', None, None)
+    tree = SimpleTree()
+    tree.insert(root, 20)
+    tree.insert(root, 30)
+    tree.insert(root, 40)
+    tree.insert(root, 10)
+    tree.insert(root, -13)
+    tree.insert(root, 100)
 
-    root.left = child_left
-    root.right = child_right
+    pprint(tree)
 
-    grand_child_left = SimpleTree('grand-child-left', None, None)
-    grand_child_right = SimpleTree('grand-child-right', None, None)
-
-    child_left.left = grand_child_left
-    child_right.right = grand_child_right
-
-    root.traverse_preorder(root)
+    pprint('### pre order ###')
+    tree.traverse_preorder(root)
 
     pprint('### in order ###')
-    root.traverse_inorder(root)
+    tree.traverse_inorder(root)
 
     pprint('### post order ###')
-    root.traverse_postorder(root)
+    tree.traverse_postorder(root)
+
+    pprint(tree.search(root, 10))
 
 
 if __name__ == '__main__':
