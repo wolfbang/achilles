@@ -52,6 +52,59 @@ class TreeNode(object):
         if self.has_right_child():
             self.right.parent = self
 
+    def children_count(self):
+        """
+        add children count
+        :return: 
+        """
+        total = 0
+        if self.left:
+            total += 1
+        if self.right:
+            total += 1
+
+        return total
+
+    def _find_min(self, parent):
+        if self.left:
+            return self.left._find_min(self)
+        else:
+            return [parent, self]
+
+    def delete(self, key):
+        """
+        delete the node with the given key 
+        and return the root node of the tree
+        :param key: 
+        :return: 
+        """
+
+        if self.key == key:
+
+            if self.right and self.left:
+                [psucc, succ] = self.right._find_min(self)
+
+                if psucc.left == succ:
+                    psucc.left = succ.right
+                else:
+                    psucc.right = succ.right
+
+                succ.left = self.left
+                succ.right = self.right
+                return succ
+            else:
+                if self.left:
+                    return self.left
+                else:
+                    return self.right
+        else:
+            if self.key > key:
+                self.left = self.left.delete(key)
+            else:
+                if self.right:
+                    self.right = self.right.delete(key)
+        return self
+
 
 class BinarySearchTree(object):
     def __init__(self):
