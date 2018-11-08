@@ -77,7 +77,6 @@ def run():
              "/Users/lucas/projects/achilles", "/Users/lucas/projects/flask-rocket",
              "/Users/lucas/projects/sancho-panza","/Users/lucas/projects/pilot-hitchhiking"]
 
-    paths = ["/Users/lucas/projects/pilot-hitchhiking"]
     total = 0
     for path in paths:
         line_number = read_file(path=path)
