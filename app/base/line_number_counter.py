@@ -75,7 +75,9 @@ def run():
     paths = ["/Users/lucas/projects/spacex-flask", "/Users/lucas/projects/spacex-rider",
              "/Users/lucas/projects/algo-dojo", "/Users/lucas/projects/spacex-shane", "/Users/lucas/projects/treasure",
              "/Users/lucas/projects/achilles", "/Users/lucas/projects/flask-rocket",
-             "/Users/lucas/projects/sancho-panza","/Users/lucas/projects/pilot-hitchhiking"]
+             "/Users/lucas/projects/sancho-panza", "/Users/lucas/projects/pilot-hitchhiking",
+             "/Users/lucas/projects/pivotal-short-url",
+             "/Users/lucas/projects/dolphin-mvc", "/Users/lucas/projects/philosopher-stone"]
 
     total = 0
     for path in paths:
