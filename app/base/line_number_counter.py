@@ -21,7 +21,7 @@ def print_args(func):
     return wrapper
 
 
-def is_file_match(path, file_type_list=('.java', '.py')):
+def is_file_match(path, file_type_list=('.java', '.py', '.go')):
     if not path:
         return False
 
@@ -77,7 +77,8 @@ def run():
              "/Users/lucas/projects/achilles", "/Users/lucas/projects/flask-rocket",
              "/Users/lucas/projects/sancho-panza", "/Users/lucas/projects/pilot-hitchhiking",
              "/Users/lucas/projects/pivotal-short-url",
-             "/Users/lucas/projects/dolphin-mvc", "/Users/lucas/projects/philosopher-stone"]
+             "/Users/lucas/projects/dolphin-mvc", "/Users/lucas/projects/philosopher-stone",
+             "/Users/lucas/projects/kaka-zebra"]
 
     total = 0
     for path in paths:
