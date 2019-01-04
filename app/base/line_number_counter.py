@@ -78,7 +78,7 @@ def run():
              "/Users/lucas/projects/sancho-panza", "/Users/lucas/projects/pilot-hitchhiking",
              "/Users/lucas/projects/pivotal-short-url",
              "/Users/lucas/projects/dolphin-mvc", "/Users/lucas/projects/philosopher-stone",
-             "/Users/lucas/projects/kaka-zebra"]
+             "/Users/lucas/projects/kaka-zebra","/Users/lucas/projects/ferdinand-magellan"]
 
     total = 0
     for path in paths:
